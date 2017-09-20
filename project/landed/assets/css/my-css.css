@@ -55,8 +55,9 @@
   border-radius: 5px;
 }
 
-.read-more{
-  display: inline-block;
+.read-more {
+  background: #1c1d26 none repeat scroll 0 0;
+  clear: both;
+  display: table;
   padding: 2px 9px;
-  background: #1C1D26;
 }

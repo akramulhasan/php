@@ -13,7 +13,8 @@
 		echo $content;
 	}
 	else{
-		echo "<h2>Homepage</h2>";
+		
+		header('location:homepage.php');
 	}
 
 

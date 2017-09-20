@@ -8,8 +8,20 @@ class Crud{
 			die("Connection Fail for: ".$this->conn->connect_error);
 		}
 	}
+
 public function getAll2($table,$cols){
 			$sql="SELECT $cols FROM $table";
+			$query=$this->conn->query($sql);
+			if($query->num_rows>0){
+					return $query->fetch_all(MYSQLI_ASSOC);
+			}
+			else{
+				return false;
+			}
+	}
+
+public function getLatest($table,$cols,$limit){
+			$sql="SELECT $cols FROM $table LIMIT $limit";
 			$query=$this->conn->query($sql);
 			if($query->num_rows>0){
 					return $query->fetch_all(MYSQLI_ASSOC);

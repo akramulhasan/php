@@ -1,0 +1,62 @@
+.sidebar {
+  list-style: outside none none;
+  padding: 0;
+}
+.sidebar li {
+  background: hsl(235, 13%, 18%) none repeat scroll 0 0;
+  margin: 5px 0;
+  padding: 10px;
+}
+.sidebar a::before {
+	content: "\2192";
+}
+.archive a::before{
+  content: none;
+}
+.sidebar a {
+  border: 0 none;
+  color: hsl(0, 0%, 100%);
+}
+.sidebar li:hover a {
+
+	margin-left: 10px;
+	transition: 0.5s;
+}
+
+/*Singe Page*/
+
+.wrapper{
+  overflow: hidden;
+}
+
+.wrapper > section.content {
+  float: left;
+  margin-right: 2%;
+  padding: 2%;
+  width: 65%;
+  overflow: hidden;
+}
+.wrapper > section.sidebar {
+  float: left;
+  padding: 2%;
+  width: 25%;
+  margin-left: 1%;
+  overflow: hidden;
+}
+
+#footer{
+  overflow: hidden;
+}
+
+.archive_content {
+  background: #282934 none repeat scroll 0 0;
+  margin: 10px 0;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.read-more{
+  display: inline-block;
+  padding: 2px 9px;
+  background: #1C1D26;
+}

@@ -28,7 +28,35 @@ public function getAll2($table,$cols){
 		}
 	}
 
-public function getAll($table,$cols,$table_width="600px", $cellpadding=5,$cellspacing=0,$css_classes="table table-bordered table-hover table-stripped table-condensed"){
+	public function Login($table,$cols,$condition){
+
+		$sql = "SELECT $cols FROM $table WHERE $condition";
+
+		$result = $this->conn->query($sql);
+
+		if($result->num_rows==1){
+			return $result->fetch_assoc();
+		}else{
+			return false;
+		}
+
+	}
+
+	public function EmailExist($table,$cols,$condition){
+
+		$sql = "SELECT $cols FROM $table WHERE $condition";
+
+		$result = $this->conn->query($sql);
+
+		if($result->num_rows>0){
+			return $result->fetch_assoc();
+		}else{
+			return false;
+		}
+
+	}
+
+	public function getAll($table,$cols,$table_width="600px", $cellpadding=5,$cellspacing=0,$css_classes="table table-bordered table-hover table-stripped table-condensed"){
 
 		$sql="SELECT $cols FROM $table";
 

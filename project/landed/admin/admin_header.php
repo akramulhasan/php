@@ -14,6 +14,7 @@
     <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
     <link href="bower_components/morrisjs/morris.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
     <script type="text/javascript" src="js/ckeditor/ckeditor.js"></script>
 
 
@@ -44,7 +45,7 @@ echo @$msg;
                         </form>
                     </li>
                     <li>
-                        <a class="profile-pic" href="#"> <img src="images/users/hritik.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">Maruti</b> </a>
+                        <a class="profile-pic" href="#"> <img src="images/users/hritik.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs"><?php echo $_SESSION['f_name']; ?></b> </a>
                     </li>
                 </ul>
             </div>

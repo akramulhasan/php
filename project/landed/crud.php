@@ -44,6 +44,7 @@ public function getAllOfSameId($table,$cols,$condition){
 
 	public function Insert($table,$cols){
 		$sql="INSERT INTO $table SET $cols";
+		echo $sql;
 		$query=$this->conn->query($sql);
 		if($this->conn->affected_rows>0){
 			return true;

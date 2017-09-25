@@ -20,6 +20,10 @@ include('crud.php');
 			<!-- Header -->
 				<header id="header">
 					<h1 id="logo"><a href="index.php">Landed</a></h1>
+					<div class="user-sec">
+						<a class="reg" href="admin/register.php">Registration</a>
+						<a class="log" href="admin/index.php">Login</a>
+					</div>
 					<nav id="nav">
 
                     <?php
